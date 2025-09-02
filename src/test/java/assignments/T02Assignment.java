@@ -11,7 +11,7 @@ public class T02Assignment {
         WebDriver driver = new FirefoxDriver();
 
         //Go to https://www.youtube.com/
-        driver.get("https://www.youtube.com/");
+        driver.navigate().to("https://www.youtube.com/");
 
         //Verify the page title contains the word video
         String title = driver.getTitle();

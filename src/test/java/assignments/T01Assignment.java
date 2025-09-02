@@ -11,7 +11,7 @@ public class T01Assignment {
         WebDriver driver = new ChromeDriver();
 
         //Open google home page: https://www.google.com/
-        driver.get("https://www.google.com/");
+        driver.navigate().to("https://www.google.com/");
 
         //Get title on page
         String title = driver.getTitle();
