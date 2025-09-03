@@ -1,9 +1,6 @@
 package assignments.testsAssignments;
 
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -12,7 +9,7 @@ public class T04TestAssignment {
     /*
     Task 4: Multiple Navigation and Verification
     Setup:
-    Launch Chrome and maximize in @BeforeEach.
+    Launch Chrome and maximize in @BeforeAll.
     Test 1:
     Navigate Google → YouTube → LinkedIn.
     Assert titles contain "Google", "YouTube", "LinkedIn" respectively.
@@ -20,16 +17,16 @@ public class T04TestAssignment {
     Navigate back twice and assert the URL of Google.
     Navigate forward twice and assert URL of LinkedIn.
     Teardown:
-    Use @AfterEach to quit the browser.
+    Use @AfterAll to quit the browser.
 
      */
-    WebDriver driver;
+    static WebDriver driver;
     String googleUrl = "https://www.google.com/";
     String youtubeUrl = "https://www.youtube.com/";
     String linkedinUrl = "https://www.linkedin.com/";
 
     @Test
-    void NavigationAndTitleTest(){
+    void ANavigationAndTitleTest(){
         driver.navigate().to(googleUrl);
         String googleTitle = driver.getTitle();
         Assertions.assertTrue(googleTitle.contains("Google"));
@@ -46,9 +43,6 @@ public class T04TestAssignment {
 
     @Test
     void BackForwardAndUrlTest(){
-        driver.navigate().to(googleUrl);
-        driver.navigate().to(youtubeUrl);
-        driver.navigate().to(linkedinUrl);
         driver.navigate().back();
         driver.navigate().back();
         String currentUrl = driver.getCurrentUrl();
@@ -59,14 +53,14 @@ public class T04TestAssignment {
         Assertions.assertEquals(linkedinUrl, currentUrl);
 
     }
-    @BeforeEach
-    void setup(){
+    @BeforeAll
+    static void setup(){
         driver = new ChromeDriver();
         driver.manage().window().maximize();
     }
 
-    @AfterEach
-    void teardown(){
+    @AfterAll
+    static void teardown(){
         driver.quit();
     }
 }
