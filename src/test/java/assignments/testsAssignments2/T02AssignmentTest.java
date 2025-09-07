@@ -41,14 +41,17 @@ public class T02AssignmentTest {
 
     @Test
     void relativeXpathTest() throws InterruptedException {
+        // Locate elements using relative XPath
         By usernameByRelative = By.xpath(relativeUsernameXPath);
         By passwordByRelative = By.xpath(relativePasswordXPath);
         By loginButtonByRelative = By.xpath(relativeLoginButtonXPath);
 
+        // Extract credentials
         WebElement usernameElement = driver.findElement(usernameByRelative);
         WebElement passwordElement = driver.findElement(passwordByRelative);
         WebElement loginButtonElement = driver.findElement(loginButtonByRelative);
 
+        // Enter credentials and click login
         usernameElementByName.sendKeys(usernameElement.getText().split(":")[1].trim());
         passwordElementByName.sendKeys(passwordElement.getText().split(":")[1].trim());
         loginButtonElement.click();
@@ -63,14 +66,17 @@ public class T02AssignmentTest {
 
     @Test
     void absoluteXpathTest() throws InterruptedException {
+        // Locate elements using absolute XPath
         By usernameByAbsolute = By.xpath(absoluteUsernameXPath);
         By passwordByAbsolute = By.xpath(absolutePasswordXPath);
         By loginButtonByAbsolute = By.xpath(absoluteLoginButtonXPath);
 
+        // Extract credentials
         WebElement usernameElement = driver.findElement(usernameByAbsolute);
         WebElement passwordElement = driver.findElement(passwordByAbsolute);
         WebElement loginButtonElement = driver.findElement(loginButtonByAbsolute);
 
+        // Enter credentials and click login
         usernameElementByName.sendKeys(usernameElement.getText().split(":")[1].trim());
         passwordElementByName.sendKeys(passwordElement.getText().split(":")[1].trim());
         loginButtonElement.click();
