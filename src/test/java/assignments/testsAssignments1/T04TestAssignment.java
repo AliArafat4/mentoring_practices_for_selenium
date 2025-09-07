@@ -1,4 +1,4 @@
-package assignments.testsAssignments;
+package assignments.testsAssignments1;
 
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.WebDriver;
