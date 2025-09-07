@@ -1,4 +1,4 @@
-package assignments;
+package assignments.selenium;
 
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.Point;
