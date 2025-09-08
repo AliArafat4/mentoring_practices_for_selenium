@@ -19,11 +19,11 @@ public class T02AssignmentTest {
     String absoluteUsernameXPath = "/html/body/div/div[1]/div/div[1]/div/div[2]/div[2]/div/div/p[1]"; // Fill absolute path
 
     // TODO: Locate username using relative XPath
-    String relativeUsernameXPath = "//p[@class='oxd-text oxd-text--p'][1]"; // Fill relative path
+    String relativeUsernameXPath = "//*[.='Username : Admin']"; // or "//p[.='Username : Admin']", Fill relative path
 
     // TODO: Locate password using both methods
     String absolutePasswordXPath = "/html/body/div/div[1]/div/div[1]/div/div[2]/div[2]/div/div/p[2]"; // Fill absolute path
-    String relativePasswordXPath = "//p[@class='oxd-text oxd-text--p'][2]"; // Fill relative path
+    String relativePasswordXPath = "//p[.='Password : admin123']"; // or "//*[.='Username : Admin']", Fill relative path
 
     // TODO: Locate login button using both methods
     String absoluteLoginButtonXPath = "/html/body/div/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button"; // Fill absolute path
