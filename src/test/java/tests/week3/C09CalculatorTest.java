@@ -1,4 +1,4 @@
-package tests;
+package tests.week3;
 
 public class C09CalculatorTest {
     /*
