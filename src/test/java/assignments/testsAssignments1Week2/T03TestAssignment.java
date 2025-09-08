@@ -1,4 +1,4 @@
-package assignments.testsAssignments1;
+package assignments.testsAssignments1Week2;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;

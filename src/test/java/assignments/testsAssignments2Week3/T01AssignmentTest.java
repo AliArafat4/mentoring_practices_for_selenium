@@ -1,4 +1,4 @@
-package assignments.testsAssignments2;
+package assignments.testsAssignments2Week3;
 
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.By;
@@ -7,7 +7,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import javax.xml.xpath.XPath;
 import java.time.Duration;
 
 public class T01AssignmentTest {
