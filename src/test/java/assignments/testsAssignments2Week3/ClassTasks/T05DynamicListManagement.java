@@ -1,4 +1,4 @@
-package tests.week3.ClassTasks;
+package assignments.testsAssignments2Week3.ClassTasks;
 
 import com.github.javafaker.Faker;
 import org.junit.jupiter.api.AfterEach;
