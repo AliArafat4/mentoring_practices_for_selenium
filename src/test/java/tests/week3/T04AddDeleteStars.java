@@ -24,9 +24,9 @@ public class T04AddDeleteStars  extends TestBase {
         driver.get("https://claruswaysda.github.io/addDeleteStar.html");
         addStars(addStarsNum);
         deleteStars(deleteStarsNum);
-        int remainingStars = driver.findElements(stars).size();
-        Assertions.assertEquals(addStarsNum-deleteStarsNum,remainingStars, "Not all stars were deleted. Remaining stars: " + remainingStars);
+        VerifyStars(addStarsNum-deleteStarsNum);
     }
+
     void addStars(int numberOfStars){
         for(int i = 0 ; i < numberOfStars; i++){
             driver.findElement(addButton).click();
@@ -36,6 +36,11 @@ public class T04AddDeleteStars  extends TestBase {
         for(int i = 0 ; i < numberOfStars; i++){
             driver.findElement(deleteButton).click();
         }
+    }
+
+    void VerifyStars(int expectedNumberOfStars) {
+        int remainingStars = driver.findElements(stars).size();
+        Assertions.assertEquals(expectedNumberOfStars,remainingStars, "Not all stars were deleted. Remaining stars: " + remainingStars);
     }
 
 }
